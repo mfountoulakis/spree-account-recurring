@@ -13,6 +13,7 @@ gem 'spree_auth_devise', github: 'spree/spree_auth_devise', branch: '3-0-stable'
 # Provides basic frontend and backend functionalities for testing purposes
 # gem 'spree_backend', '~> 2.4'
 # gem 'spree_frontend', '~> 2.4'
+gem 'spree', '3.0.4'
 
 group :test do
   gem 'shoulda-matchers'
