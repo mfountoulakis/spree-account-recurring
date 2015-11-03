@@ -12,7 +12,7 @@ module Spree
     validates :type, :name, presence: true
     validates :type, uniqueness: { message: 'of provider recurring already exists' }
 
-    scope :active, -> { undeleted.where(active: true) }
+    # scope :active, -> { undeleted.where(active: true) }
 
     def self.display_name
       name.gsub(%r{.+:}, '')
