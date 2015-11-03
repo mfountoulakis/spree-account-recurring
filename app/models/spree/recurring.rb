@@ -1,6 +1,6 @@
 module Spree
   class Recurring < Spree::Base
-    include RestrictiveDestroyer
+    # include RestrictiveDestroyer
 
     acts_as_restrictive_destroyer
 
