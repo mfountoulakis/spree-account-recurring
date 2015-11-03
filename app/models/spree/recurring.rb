@@ -1,8 +1,8 @@
 module Spree
   class Recurring < Spree::Base
-    # include RestrictiveDestroyer
+    include RestrictiveDestroyer
 
-    # acts_as_restrictive_destroyer
+    acts_as_restrictive_destroyer
 
     preference :secret_key, :string
     preference :public_key, :string
@@ -12,7 +12,7 @@ module Spree
     validates :type, :name, presence: true
     validates :type, uniqueness: { message: 'of provider recurring already exists' }
 
-    # scope :active, -> { undeleted.where(active: true) }
+    scope :active, -> { undeleted.where(active: true) }
 
     def self.display_name
       name.gsub(%r{.+:}, '')
