@@ -2,7 +2,7 @@ module Spree
   class Recurring < Spree::Base
     # include RestrictiveDestroyer
 
-    acts_as_restrictive_destroyer
+    # acts_as_restrictive_destroyer
 
     preference :secret_key, :string
     preference :public_key, :string
